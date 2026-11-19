@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; font-src 'none'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="A pastel pixel-art platform adventure. Skate through the city as a white bunny, collect cookies and meet five friends.">
+  <meta name="theme-color" content="#25295e">
+  <title>NewJeans Game</title>
+  <link rel="icon" href="assets/icons/njz-bunny.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/njz-bunny-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/njz-bunny-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/njz-bunny-apple-touch.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+  <link rel="modulepreload" href="js/level.js">
+  <link rel="modulepreload" href="js/art.js">
+  <link rel="modulepreload" href="js/pixels.js">
+  <link rel="modulepreload" href="js/save.js">
+  <link rel="modulepreload" href="js/photocards-data.js">
+  <link rel="modulepreload" href="js/bunny-overlays.js">
+  <link rel="modulepreload" href="js/ambient.js">
+  <link rel="modulepreload" href="js/room.js">
+  <link rel="modulepreload" href="js/cards-ui.js">
+  <link rel="modulepreload" href="js/sprites.js">
+  <link rel="modulepreload" href="js/config.js">
+  <link rel="modulepreload" href="js/font.js">
+  <link rel="modulepreload" href="js/audio.js">
+  <link rel="preload" as="image" href="assets/characters/bunny.png">
+  <link rel="preload" as="image" href="assets/characters/girl-01.png">
+  <link rel="preload" as="image" href="assets/characters/girl-02.png">
+  <link rel="preload" as="image" href="assets/characters/girl-03.png">
+  <link rel="preload" as="image" href="assets/characters/girl-04.png">
+  <link rel="preload" as="image" href="assets/characters/girl-05.png">
+  <link rel="preload" as="image" href="assets/tv-bunny.png">
+</head>
+<body>
+  <main id="app">
+    <h1 class="sr-only">NewJeans Game</h1>
+    <div id="stage">
+      <canvas id="game" role="img" aria-label="NewJeans Game screen"></canvas>
+      <div id="hud-buttons" hidden>
+        <button type="button" class="pix-btn icon-btn" id="btn-music" aria-pressed="true" aria-label="Music"></button>
+        <button type="button" class="pix-btn icon-btn" id="btn-sfx" aria-pressed="true" aria-label="Sound effects"></button>
+        <button type="button" class="pix-btn icon-btn" id="btn-pause" aria-label="Pause"></button>
+      </div>
+      <div id="overlay" hidden></div>
+    </div>
+    <div id="touch" aria-hidden="true">
+      <div id="dpad">
+        <div class="touch-btn" data-dir="left"></div>
+        <div class="touch-btn" data-dir="right"></div>
+      </div>
+      <div id="touch-right">
+        <div class="touch-btn" id="touch-action" hidden></div>
+        <div class="touch-btn" id="touch-jump"></div>
+      </div>
+    </div>
+    <div id="rotate" role="alert" hidden></div>
+    <p id="live" class="sr-only" aria-live="polite"></p>
+  </main>
+  <noscript><p class="noscript">This game needs JavaScript to run.</p></noscript>
+</body>
+</html>
